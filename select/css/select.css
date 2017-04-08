@@ -1,0 +1,213 @@
+html, body, .wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #eee; }
+
+.wrapper {
+  display: flex;
+  flex-direction: column; }
+  .wrapper header {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-bottom: 0.1rem solid #ccc;
+    flex-shrink: 0;
+    box-sizing: border-box; }
+    .wrapper header a {
+      flex: 1;
+      font-size: 1.4rem; }
+      .wrapper header a i {
+        font-size: 2rem; }
+      .wrapper header a:nth-child(2) {
+        flex: 4; }
+  .wrapper .main {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    overflow-y: scroll; }
+    .wrapper .main .banner img {
+      width: 100%; }
+    .wrapper .main article {
+      height: auto;
+      padding: 3%;
+      background: #fff; }
+      .wrapper .main article h2, .wrapper .main article h3 {
+        color: #000;
+        font-weight: normal;
+        line-height: 30px; }
+      .wrapper .main article p {
+        text-indent: 2rem; }
+    .wrapper .main .shop {
+      height: auto;
+      padding: 3%;
+      background-color: #fff; }
+      .wrapper .main .shop h2 {
+        color: #4F98F1;
+        text-align: center;
+        font-weight: normal;
+        line-height: 25px; }
+      .wrapper .main .shop p {
+        margin: 3% auto; }
+      .wrapper .main .shop i.iconfont {
+        color: #fff;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 22px;
+        display: inline-block;
+        border-radius: 100%;
+        background-color: #4F98F1; }
+      .wrapper .main .shop .shop-name .middle {
+        color: #fff;
+        font-size: 1.4rem;
+        text-align: center;
+        line-height: 45px;
+        margin-top: 3%;
+        background-color: #4F98F1; }
+      .wrapper .main .shop .shop-name img {
+        width: 45%;
+        margin: 5% auto;
+        display: block; }
+      .wrapper .main .shop .title {
+        font-size: 1.4rem;
+        line-height: 35px;
+        padding-left: 5%;
+        border-top: 0.1rem solid #ccc;
+        border-bottom: 0.1rem solid #ccc; }
+      .wrapper .main .shop .product {
+        display: flex;
+        border-bottom: 0.1rem solid #ccc; }
+        .wrapper .main .shop .product dl {
+          flex: 1; }
+          .wrapper .main .shop .product dl:nth-child(2) span {
+            border-right: none; }
+          .wrapper .main .shop .product dl dt {
+            text-align: center;
+            padding: 5% 0;
+            border-bottom: 0.1rem solid #ccc; }
+            .wrapper .main .shop .product dl dt span {
+              display: block;
+              font-size: 1.4rem;
+              border-right: 0.1rem solid #ccc; }
+              .wrapper .main .shop .product dl dt span:nth-child(2) {
+                color: #4F98F1; }
+          .wrapper .main .shop .product dl dd {
+            padding: 5%; }
+      .wrapper .main .shop .company {
+        font-size: 1.4rem;
+        margin: 3%; }
+        .wrapper .main .shop .company .star {
+          display: flex;
+          align-items: center; }
+          .wrapper .main .shop .company .star dt {
+            flex: 1; }
+            .wrapper .main .shop .company .star dt img {
+              width: 100%; }
+          .wrapper .main .shop .company .star dd {
+            flex: 4;
+            margin-left: 3%; }
+            .wrapper .main .shop .company .star dd a {
+              color: #4F99F1;
+              margin-left: 2%;
+              text-decoration: underline; }
+        .wrapper .main .shop .company .address {
+          margin-top: 2%;
+          margin-bottom: 2%; }
+          .wrapper .main .shop .company .address label {
+            line-height: 25px;
+            display: block; }
+        .wrapper .main .shop .company b {
+          font-weight: normal; }
+        .wrapper .main .shop .company .map {
+          width: 100%;
+          height: 200px;
+          margin-top: 3%;
+          border: 0.1rem solid #ccc; }
+      .wrapper .main .shop .source {
+        padding: 3%; }
+        .wrapper .main .shop .source .record {
+          color: #4F99F1;
+          text-align: center;
+          margin-bottom: 3%; }
+          .wrapper .main .shop .source .record p img {
+            width: 30%; }
+        .wrapper .main .shop .source .judge {
+          display: flex;
+          flex-wrap: wrap;
+          text-align: center;
+          box-sizing: border-box; }
+          .wrapper .main .shop .source .judge dl {
+            width: 50%; }
+            .wrapper .main .shop .source .judge dl dt img {
+              width: 50%; }
+            .wrapper .main .shop .source .judge dl dd {
+              color: #4F99F1;
+              line-height: 35px; }
+      .wrapper .main .shop .approve {
+        text-align: center; }
+        .wrapper .main .shop .approve .green {
+          display: flex;
+          line-height: 40px; }
+          .wrapper .main .shop .approve .green a {
+            flex: 1; }
+            .wrapper .main .shop .approve .green a:nth-child(1) {
+              flex: 2; }
+            .wrapper .main .shop .approve .green a:nth-child(2) i {
+              margin-right: 10%; }
+            .wrapper .main .shop .approve .green a:nth-child(3) {
+              font-size: 1.6rem; }
+      .wrapper .main .shop .summary {
+        text-align: center; }
+        .wrapper .main .shop .summary img {
+          width: 45%;
+          margin: 5% auto;
+          display: block; }
+        .wrapper .main .shop .summary p {
+          width: 70%; }
+      .wrapper .main .shop .introduce {
+        text-indent: 2rem; }
+        .wrapper .main .shop .introduce p {
+          width: 88%; }
+      .wrapper .main .shop .info {
+        margin-bottom: 5%; }
+        .wrapper .main .shop .info .shopping {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          line-height: 40px;
+          border-bottom: 0.1rem solid #ccc; }
+          .wrapper .main .shop .info .shopping a {
+            flex: 1; }
+            .wrapper .main .shop .info .shopping a i {
+              margin-right: 3%; }
+        .wrapper .main .shop .info ul li {
+          display: flex;
+          font-size: 1.4rem;
+          align-items: center;
+          line-height: 46px;
+          border-bottom: 0.1rem solid #ccc; }
+          .wrapper .main .shop .info ul li a i {
+            font-size: 1.6rem; }
+          .wrapper .main .shop .info ul li a:nth-child(1) {
+            flex: 8; }
+      .wrapper .main .shop .other {
+        margin-bottom: 5%; }
+        .wrapper .main .shop .other .else {
+          margin-top: 5%;
+          display: flex; }
+          .wrapper .main .shop .other .else dl {
+            flex: 1;
+            padding: 2%; }
+            .wrapper .main .shop .other .else dl dt img {
+              width: 100%; }
+            .wrapper .main .shop .other .else dl dd img {
+              width: 80%; }
+    .wrapper .main .last {
+      font-size: 1.4rem;
+      text-align: center;
+      line-height: 45px; }
+
+/*# sourceMappingURL=select.css.map */

@@ -1,0 +1,184 @@
+html, body, .wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #eee; }
+
+.wrapper {
+  display: flex;
+  flex-direction: column; }
+  .wrapper header {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+    border-bottom: 0.1rem solid #ccc;
+    background: #fff; }
+    .wrapper header a {
+      flex: 1;
+      font-size: 1.4rem; }
+      .wrapper header a i {
+        font-size: 2rem; }
+      .wrapper header a:nth-child(2) {
+        flex: 4; }
+  .wrapper .address {
+    width: 100%;
+    height: auto;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #fff; }
+    .wrapper .address dl {
+      flex: 8; }
+      .wrapper .address dl dt {
+        text-indent: 2rem;
+        line-height: 30px; }
+        .wrapper .address dl dt span {
+          color: #000;
+          font-size: 1.4rem;
+          margin-right: 3%; }
+      .wrapper .address dl dd {
+        position: relative; }
+        .wrapper .address dl dd i {
+          position: absolute;
+          top: 5%;
+          left: 2%; }
+        .wrapper .address dl dd p {
+          margin-left: 8%; }
+    .wrapper .address a {
+      flex: 1;
+      text-align: center;
+      font-size: 2rem; }
+  .wrapper .post {
+    flex-shrink: 0;
+    height: 2%;
+    margin-bottom: 5%; }
+    .wrapper .post img {
+      width: 100%;
+      height: 100%; }
+  .wrapper .main {
+    flex: 1;
+    overflow-y: scroll; }
+    .wrapper .main .shop {
+      height: auto;
+      padding: 3%;
+      background-color: #fff; }
+      .wrapper .main .shop h3 {
+        font-size: 1.4rem;
+        font-weight: normal;
+        line-height: 40px; }
+        .wrapper .main .shop h3 i {
+          font-size: 2rem;
+          color: #FF6D1F;
+          margin-right: 2%; }
+      .wrapper .main .shop dl {
+        display: flex;
+        align-items: center; }
+        .wrapper .main .shop dl dt {
+          flex: 3; }
+          .wrapper .main .shop dl dt img {
+            width: 100%; }
+        .wrapper .main .shop dl dd {
+          position: relative;
+          flex: 8;
+          margin-left: 2%; }
+          .wrapper .main .shop dl dd p:nth-child(1), .wrapper .main .shop dl dd p:nth-child(2) {
+            font-size: 1.4rem; }
+          .wrapper .main .shop dl dd p:nth-child(2) {
+            color: #FB4141;
+            margin-top: 8%; }
+          .wrapper .main .shop dl dd p:nth-child(3) {
+            color: #a3a3a3;
+            text-decoration: line-through; }
+          .wrapper .main .shop dl dd .angular {
+            width: 50%;
+            position: absolute;
+            right: 0;
+            bottom: 2%; }
+            .wrapper .main .shop dl dd .angular button {
+              padding: 8% 10%;
+              border: none;
+              border-radius: 5px;
+              border: 0.1rem solid #ccc;
+              background-color: #fff; }
+            .wrapper .main .shop dl dd .angular span {
+              padding: 8% 18%;
+              border-radius: 5px;
+              border: 0.1rem solid #ccc; }
+      .wrapper .main .shop .price {
+        margin-top: 3%;
+        display: flex;
+        align-items: center; }
+        .wrapper .main .shop .price div {
+          flex: 1;
+          line-height: 20px; }
+          .wrapper .main .shop .price div:nth-child(2) {
+            text-align: right; }
+            .wrapper .main .shop .price div:nth-child(2) .total {
+              color: #FB4141;
+              font-size: 1.4rem; }
+    .wrapper .main .payfor {
+      height: auto;
+      margin: 3% 0;
+      padding: 3%;
+      background-color: #fff; }
+      .wrapper .main .payfor li {
+        position: relative;
+        color: #000;
+        font-size: 1.4rem;
+        line-height: 50px;
+        border-bottom: 0.1rem solid #ccc; }
+        .wrapper .main .payfor li .toggle-radio, .wrapper .main .payfor li i {
+          position: absolute;
+          right: 0; }
+        .wrapper .main .payfor li .toggle-radio {
+          top: 20%; }
+        .wrapper .main .payfor li i {
+          font-size: 2rem;
+          line-height: 50px; }
+    .wrapper .main .mark {
+      display: none;
+      position: absolute;
+      bottom: 14%;
+      left: 0;
+      right: 0;
+      color: #fff;
+      width: 80%;
+      height: 50px;
+      font-size: 1.4rem;
+      line-height: 50px;
+      text-align: center;
+      margin: auto;
+      border-radius: 20px;
+      background-color: rgba(0, 0, 0, 0.5); }
+  .wrapper footer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #fff; }
+    .wrapper footer div:nth-child(1) {
+      flex: 6;
+      text-align: right; }
+      .wrapper footer div:nth-child(1) p {
+        margin-right: 3%; }
+        .wrapper footer div:nth-child(1) p span {
+          color: #F71919;
+          font-weight: bold; }
+    .wrapper footer div:nth-child(2) {
+      flex: 3; }
+      .wrapper footer div:nth-child(2) button {
+        width: 100%;
+        color: #fff;
+        font-size: 1.4rem;
+        text-align: center;
+        line-height: 60px;
+        border: none;
+        background-color: #FB4141; }
+
+/*# sourceMappingURL=pay.css.map */

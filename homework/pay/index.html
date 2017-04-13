@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单支付</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name=”apple-mobile-web-app-capable” content=”yes”/>
+    <meta name=”apple-mobile-web-app-status-bar-style” content=”default”/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="address=no"/>
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/pay.css">
+</head>
+<body ng-app="myApp">
+    <div class="wrapper" ng-controller="myCtrl">
+        <header>
+            <a href=""><i class="fa fa-angle-left"></i></a>
+            <a href="javascript:;">订单支付</a>
+            <a href=""><i class="iconfont icon-gengduo"></i></a>
+        </header>
+        <div class="address">
+            <dl>
+                <dt><span>路飞</span>138****8888</dt>
+                <dd>
+                    <i class="iconfont icon-shouhuodizhi"></i>
+                    <p>北京市海淀区知春路北京市海淀区知春路北京市海淀区知春路</p>
+                </dd>
+            </dl>
+            <a href=""><i class="fa fa-angle-right"></i></a>
+        </div>
+        <div class="post">
+            <img src="images/imgs/1.gif" alt="">
+        </div>
+        <section class="main">
+            <div class="shop">
+                <h3><i class="fa fa-home"></i>恒之然旗舰店</h3>
+                <dl>
+                    <dt><img src="images/imgs/2.gif" alt=""></dt>
+                    <dd>
+                        <p>维维嚼益嚼水果大豆棒橙味维维嚼益嚼水果大豆棒橙味...</p>
+                        <p>￥988.00</p>
+                        <p>¥1000.00</p>
+                        <p class="angular">
+                            <button ng-click="decrement()">-</button><span ng-bind="test"></span><button ng-click="increment()">+</button>
+                        </p>
+                    </dd>
+                </dl>
+                <div class="price">
+                    <div class="left">
+                        <p>商品总金额：</p>
+                        <p>运费：</p>
+                        <p>总额（含运费）：</p>
+                    </div>
+                    <div class="right">
+                        <p class="unit-price">￥<span ng-bind="unitPrice"></span></p>
+                        <p class="fare">￥{{fare}}</p>
+                        <p class="total">￥<span ng-bind="totalCount"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="payfor">
+                <ul>
+                    <li>
+                        余额支付<span>￥{{over}}</span>
+                        <label class="toggle-radio toggle-radio-orange">
+                            <input type="checkbox" ng-model="checks" ng-checked="check()">
+
+                            <div class="track">
+                                <div class="icon"></div>
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        奖金支付<span>￥{{over}}</span>
+                        <label class="toggle-radio toggle-radio-orange">
+                            <input type="checkbox" ng-model="check1" ng-checked="check()">
+
+                            <div class="track">
+                                <div class="icon"></div>
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        其他支付方式
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="mark">
+                金额不足，请选择其他支付方式！
+            </div>
+        </section>
+        <footer>
+            <div class="foot-left">
+                <p>总计：<span>￥{{finalTotal}}</span></p>
+                <p>（含运费）</p>
+            </div>
+            <div class="foot-right">
+                <button class="subBtn">提交订单</button>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript">
+
+        var app = angular.module('myApp',[]);
+
+        app.controller('myCtrl',function($scope){
+            $scope.test = 0;
+            $scope.fare = 10;
+            $scope.unitPrice = 988;
+            $scope.totalCount = 0;
+            $scope.over = 100;
+            $scope.checks = null;
+            $scope.check1 = null;
+            $scope.data = ['check','check1'];
+            $scope.decrement = function(){
+                if($scope.test <= 1){
+                    return
+                }
+                $scope.test--;
+                $scope.totalCount = $scope.test * ($scope.unitPrice + $scope.fare);
+                $scope.finalTotal = $scope.totalCount;
+                $scope.check = function(){
+                    if($scope.check1 == true || $scope.checks == true){
+                        $scope.finalTotal = $scope.totalCount - $scope.over;
+                    }else if($scope.check1 == false || $scope.checks == false){
+                        $scope.finalTotal = $scope.totalCount;
+                    }
+                    if($scope.check1 == true && $scope.checks == true){
+                        $scope.finalTotal = $scope.totalCount - ($scope.over + $scope.over);
+                    }else if($scope.check1 == false && $scope.checks == false){
+                        $scope.finalTotal = $scope.totalCount;
+                    }
+                }
+
+            }
+            $scope.increment =function(){
+                if($scope.test >= 8){
+                    return
+                }
+                $scope.test++;
+                $scope.totalCount = $scope.test * ($scope.unitPrice + $scope.fare);
+                $scope.finalTotal = $scope.totalCount;
+                $scope.check = function(){
+                    if($scope.check1 == true || $scope.checks == true){
+                        $scope.finalTotal = $scope.totalCount - $scope.over;
+                    }else if($scope.check1 == false || $scope.checks == false){
+                        $scope.finalTotal = $scope.totalCount;
+                    }
+                    if($scope.check1 == true && $scope.checks == true){
+                        $scope.finalTotal = $scope.totalCount - ($scope.over + $scope.over);
+                    }else if($scope.check1 == false && $scope.checks == false){
+                        $scope.finalTotal = $scope.totalCount;
+                    }
+                }
+            }
+
+
+        })
+
+        var subBtn = document.querySelector('.subBtn'),
+            mark = document.querySelector('.mark');
+        subBtn.onclick = function(){
+            mark.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+@import "reset.css";
+@import "grid";
+
+html,body,.wrapper{
+  height: 99.9%;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header{
+  div[class^="col"]{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+  .head{
+    color: #a3a3a3;
+    font-size: 1.6rem;
+  }
+  .pay{
+    color: #ccc;
+  }
+  input{
+    width: 74%;
+    height: 34px;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid #ccc;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+.down{
+  border-top: 1px solid #ccc;
+  div[class^="col"]{
+    border-left:1px solid #ccc ;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .bottom{
+    border-bottom: 1px solid #ccc;
+  }
+
+}
+.bg-green{
+  color: #fff;
+  font-size: 14px;
+  background-color: lime;
+}

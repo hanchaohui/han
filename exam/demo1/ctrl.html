@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        span{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            display: inline-block;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body ng-app="myApp">
+    <div class="wrapper" ng-controller="myCtrl">
+        <p>单价：{{price}}</p>
+        <span ng-click="decrement()">-</span>
+        <span>{{count}}</span>
+        <span ng-click="increment()">+</span>
+        <p>总金额：{{total}}</p>
+    </div>
+    <script src="js/angular.js"></script>
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('myCtrl',function($scope){
+            $scope.count = 0;
+            $scope.price = 100;
+            $scope.decrement = function(){
+                if($scope.count < 1) return
+                $scope.count--;
+                $scope.total = $scope.count * $scope.price
+            }
+            $scope.increment = function(){
+                if($scope.count > 9) return
+                $scope.count++;
+                $scope.total = $scope.count * $scope.price
+            }
+        })
+    </script>
+</body>
+</html>

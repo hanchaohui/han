@@ -1,0 +1,157 @@
+  <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="../dist/css/bootstrap.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!--font-->
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/num2.css">
+
+</head>
+
+<body ng-app="route">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <div class="admin-info">
+                <h2 class="admin-title">三鑫智慧社区</h2>
+                <h3 class="admin-sub-title">公共管理平台</h3>
+                <dl>
+                    <dt class="admin-portrait"><img src="images/u.png" alt=""></dt>
+                    <dd>管理员 张鑫</dd>
+                </dl>
+            </div>
+
+            <div class="admin-list nav-sidebar">
+                <div class="admin-list-wrap">
+                    <p class="admin-list-title">
+                        <span class="icon iconfont icon-pension"></span>
+                        <span>社区养老服务管理</span>
+                        <span class="icon iconfont icon-forward"></span>
+                    </p>
+                    <ul class="sup-menu list-group">
+                        <li class="active list-group-item"><a href="#"><span class="icon iconfont icon-list"></span>社区生日会</a></li>
+                        <li class="list-group-item"><a href="#"><span class="icon iconfont icon-list"></span>Reports</a></li>
+                        <li class="list-group-item"><a href="#"><span class="icon iconfont icon-list"></span>Analytics</a></li>
+                        <li class="list-group-item"><a href="#"><span class="icon iconfont icon-list"></span>Export</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 right-area">
+            <div class="row nav-header">
+                <div class="col-sm-7 col-md-8" style="padding-left: 0;">
+                    <nav class="navbar">
+                        <ul class="nav navbar-nav">
+                            <li class="on" ><a href="#">一口式受理平台</a></li>
+                            <li><a href="#">网格化管理平台</a></li>
+                            <li><a href="#">公共服务平台</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-sm-5 col-md-4">
+                    <nav class="navbar">
+                        <ul class="nav navbar-nav navbar-right nav-admin">
+                            <li><a href="#" class="icon iconfont icon-bell">&nbsp;</a></li>
+                            <li><a href="#" class="icon iconfont icon-email">&nbsp;</a></li>
+                            <li><a href="#" class="icon iconfont icon-admin">&nbsp;</a></li>
+                            <li><a href="#" class="admin-name">管理员 张鑫 <span class="icon iconfont icon-triangle"></span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="main">
+                <div class="main-top">
+                    <p class="main-sup-info">...>社区生日会</p>
+                    <div class="text-center main-button">
+                        <button type="button" class="btn btn-info btn-lg" ui-sref="page1" ui-sref-active="btn-info">信息管理</button>
+                        <button type="button" class="btn btn-default btn-lg" ui-sref="page2" ui-sref-active="btn-info">活动管理</button>
+                    </div>
+                </div>
+                <div ui-view></div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!--<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!--<script src="js/ie10-viewport-bug-workaround.js"></script>-->
+<script src="js/public/angular.js"></script>
+<script src="js/public/angular-ui-router.js"></script>
+<script>
+    var route=angular.module('route',['ui.router']);
+
+    route.config(function($stateProvider,$urlRouterProvider){
+        $urlRouterProvider.otherwise('page1')
+
+        $stateProvider
+                .state({
+                    name:'page1',
+                    url:'/page1',
+                    templateUrl:'page1.html'
+                })
+                .state({
+                    name:'page2',
+                    url:'/page2',
+                    templateUrl:'page2.html',
+                    controller:function($state){
+
+                            $state.go('page2.num1')
+
+                    }
+                })
+                .state({
+                    name:'page2.num1',
+                    url:'/num1',
+                    templateUrl:'num1.html'
+                })
+                .state({
+                    name:'page2.num2',
+                    url:'/num2',
+                    templateUrl:'num2.html'
+                })
+                .state({
+                    name:'page2.num3',
+                    url:'/num3',
+                    templateUrl:'num3.html'
+                })
+                .state({
+                    name:'page2.num4',
+                    url:'/num4',
+                    templateUrl:'num4.html'
+                })
+    })
+</script>
+</body>
+</html>

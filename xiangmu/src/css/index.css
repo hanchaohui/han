@@ -1,0 +1,61 @@
+/*公共管理平台自定义样式表*/
+/*common style*/
+.right{
+    float: right;
+}
+
+/*sidebar*/
+.admin-info{
+    color:#ffffff;
+    text-align: center;
+}
+.admin-info .admin-title{
+    font-family:JLinXin;
+    font-size:24px;
+}
+.admin-info .admin-sub-title{
+    font-family:Jxixinkai;
+    font-size:18px;
+}
+.admin-info .admin-portrait{
+    margin: 30px 0 20px 0;
+}
+.admin-list{
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+}
+.admin-list .admin-list-title{
+    line-height: 64px;
+}
+
+
+
+
+/*nav*/
+.nav-header{
+    background:#ffffff;
+    box-shadow:0 0 4px 0 rgba(0,0,0,0.50);
+    height:44px;
+}
+.navbar-nav > li > a{
+    font-size: 18px;
+    color: #999;
+    line-height: 24px;
+}
+.nav-header .on a,.nav-header .on a:hover,.nav-header .on a:focus{
+    background:#01b0b9;
+    color: #fff;
+
+}
+
+.nav-admin>li>a{
+    padding: 10px 0;
+}
+.nav-admin>li>a .icon{
+    margin: 0 20px 0 0;
+    font-size: larger;
+}
+.nav-admin .admin-name{
+    font-size: 12px;
+}

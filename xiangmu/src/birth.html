@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>三鑫智慧社区</title>
+    <link rel="stylesheet" href="../dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/birth.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse nav1">
+        <div class="container-fluid">
+            <ul class="nav nav-pills navbar-right">
+                <li class="active" role="presentation"><a href="#">注册</a></li>
+                <li role="presentation"><a href="#">登录</a></li>
+                <li role="presentation"><a href="#">通知</a></li>
+                <li role="presentation"><a href="#">设置</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-default nav2">
+        <div class="row">
+            <div class="col-md-2">
+                <a href="#"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div class="col-md-6">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a ui-sref="home" href="#" ui-sref-active="active">首页</a></li>
+                    <li><a ui-sref="community" class="active" ui-sref-active="active">社区团体活动服务</a></li>
+                    <li><a ui-sref="dang" ui-sref-active="active">党组织活动服务</a></li>
+                    <li><a ui-sref="resident" ui-sref-active="active">居民自治活动服务</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <ui-view></ui-view>
+
+    <script src="js/public/jquery.min.js"></script>
+    <script src="js/public/angular.js"></script>
+    <script src="js/public/angular-ui-router.js"></script>
+    <script src="js/public/bootstrap.min.js"></script>
+    <script src="js/config/app.js"></script>
+    <script src="js/config/config.js"></script>
+    <script src="js/config/directive.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+html,body{
+    background-color: #ccc;
+}
+
+.nav1{
+    height: 44px;
+    background-color: #01b0b9;
+}
+.nav1>li>a{
+    color: #fff;
+}
+
+.nav2,.row{
+    height: 80px;
+    background-color: #fff;
+}
+.row .col-md-2 img{
+    margin-left: 60px;
+    margin-top: 15px;
+}
+.row .col-md-6 li a{
+    color: #000;
+    font-size: 18px;
+    margin-top: 16px;
+    padding: 12px 10px;
+}
+/*.row .col-md-6 li.active{*/
+    /*background-color: transparent;*/
+/*}*/
+.row .col-md-6 li a.active{
+    color: #01b0b9;
+}
+
+
+.community-content{
+    width: 91%;
+    height: auto;
+    margin: 0 auto;
+}
+.community-content .party{
+    width: 100%;
+    height: 130px;
+    background-color: #fff;
+}
+.community-content .party .cake{
+    border-radius:7px;
+    width:70px;
+    height:70px;
+    margin: 30px;
+    float: left;
+    background:#01b0b9 url("../images/cake.png") no-repeat center center;
+}
+.community-content .party .community{
+    float: left;
+}
+.community-content .party .community>p:nth-child(1){
+    color: #01b0b9;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.community-content .party .community>p:nth-child(2){
+    line-height: 50px;
+}
+
+.tab{
+    margin-top: 8px;
+    padding-top: 30px;
+    padding-bottom: 56px;
+    background: #f4f4f4;
+}
+.tab .doings{
+    height: 40px;
+    margin-top: 30px;
+}
+.tab .doings>li>a{
+    padding: 9px 36px;
+}
+
+.tab-content{
+    padding: 15px 50px;
+}
+.tab-content .birth-party-info .base-info>h4{
+    font-weight: bold;
+    line-height: 35px;
+    border-bottom: 1px solid #777;
+}
+.tab-content .birth-party-info .base-info>p{
+    line-height: 30px;
+}
+.tab-content .birth-party-info .base-info .addFile{
+    width: 100%;
+    height: 500px;
+    border: 1px solid #bbb;
+    background: #ddd url("../images/pic3.png") no-repeat center center;
+}
+.tab-content .birth-party-info .base-info .comment>li{
+    list-style: none;
+    line-height: 40px;
+    border-bottom: 1px solid #ccc;
+}
+.tab-content .birth-party-info .base-info .comment>li>span{
+    float: right;
+    color: grey;
+    margin-right: 30px;
+}
+.tab-content .birth-party-info .base-info .input>textarea{
+    width: 100%;
+    height: 78px;
+    border:1px solid #01b0b9;
+}
+.tab-content .birth-party-info .base-info .input>.btn-primary{
+    width: 120px;
+    margin-top: 20px;
+    float: right;
+    border: none;
+    background-color: #01b0b9;
+}
+.tab-content .birth-party-info .base-info .kind>.col-md-3{
+    position: relative;
+    background:#ffffff;
+    border:1px solid #979797;
+    box-shadow:0px 2px 4px 0px rgba(0,0,0,0.5);
+    width:316px;
+    height:244px;
+    padding: 0;
+}
+.tab-content .birth-party-info .base-info .kind>.col-md-3:nth-child(1){
+    margin-left: 18px;
+}
+.tab-content .birth-party-info .base-info .kind>.col-md-3:nth-child(2),.col-md-3:nth-child(3){
+    margin-left: 80px;
+}
+.tab-content .birth-party-info .base-info .kind>.col-md-3>.fect{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 33px solid transparent;
+    border-bottom-color: #d45858;
+}
+.tab-content .birth-party-info .base-info .kind>.col-md-3 .birth-party-img{
+    width:314px;
+    height: 176px;
+    background: #eee url("../images/pic3.png") no-repeat center center;
+}
+.tab-content .birth-party-info .base-info .kind>.col-md-3 .subject>p{
+    line-height: 25px;
+    margin-left: 13px;
+}
+.tab-content .birth-party-info .base-info .kind>.col-md-3 .subject>p:first-child{
+    margin-top: 11px;
+}
+.tab-content .birth-party-info .base-info .kind>.col-md-3 .subject>p:last-child{
+    color: #999;
+}
+
+.rows{
+    height: 400px;
+    background-color: #fff;
+}
+
+.timeline-wrap{
+    border-left: 2px solid #aaa;
+    position: relative;
+    padding: 30px 21px 50px 0;
+    margin: 30px 0;
+}
+.timeline-wrap span{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border: 2px solid #aaa;
+    border-radius:100%;
+}
+.timeline-wrap span.top{
+    left: -6px;
+    top: -5px;
+}
+.timeline-wrap span.bottom{
+    left: -6px;
+    bottom: -5px;
+}
+.time-line li{
+    position: relative;
+}
+.time-line li:after{
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #aaa;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    left: -6px;
+    top: 20px;
+}
+.time-line > li:hover:after{
+    background-color: dodgerblue;
+}
+.time-line li.active:after{
+    background: dodgerblue;
+}
+
+.scrollspy-example{
+    height: 300px;
+    overflow-y: auto;
+    position: relative;
+}
+
